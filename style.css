@@ -48,10 +48,14 @@ h2{
 }
 h3{
     font-size: 34px;
+    color: var(--font-large-color);
+    text-color: white;
 }
 h4{
     font-size: 34px;
     text-align: center;
+    color: var(--font-large-color);
+    text-color: white;
 }
 h5{
     font-size: 20px;
