@@ -1,36 +1,52 @@
 // Quản lý chuyển đổi giữa các ngày (Tabs Lịch Trình)
 function openDay(evt, dayName) {
-    var i, tabcontent, tablinks;
+    let i, tabcontent, tablinks;
     
+    // Ẩn toàn bộ các nội dung ngày cũ
     tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].classList.remove("active");
     }
     
+    // Gỡ class active của toàn bộ nút tab
     tablinks = document.getElementsByClassName("tab-btn");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
     }
     
+    // Hiển thị ngày được chọn và kích hoạt nút tương ứng
     document.getElementById(dayName).classList.add("active");
     if (evt && evt.currentTarget) {
         evt.currentTarget.classList.add("active");
     }
 }
 
-// Tự động khởi tạo album 45 hình ảnh từ thư mục cục bộ image/
+// Hàm format tiền tệ áp dụng dấu chấm phân cách hàng nghìn
+function formatMoney(amount) {
+    return amount.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VNĐ";
+}
+
+// Tự động tính toán chi phí và phân bổ theo số người
+function calculateBudget() {
+    const costCar = parseFloat(document.getElementById("cost-car").value) || 0;
+    const costFood = parseFloat(document.getElementById("cost-food").value) || 0;
+    const costCafe = parseFloat(document.getElementById("cost-cafe").value) || 0;
+    const costBbq = parseFloat(document.getElementById("cost-bbq").value) || 0;
+    const costOther = parseFloat(document.getElementById("cost-other").value) || 0;
+    
+    const total = costCar + costFood + costCafe + costBbq + costOther;
+    
+    const peopleInput = document.getElementById("people");
+    const totalPeople = parseInt(peopleInput.value) || 1;
+    
+    const perPerson = total / (totalPeople > 0 ? totalPeople : 1);
+    
+    // Đổ dữ liệu ra giao diện hiển thị
+    document.getElementById("total-val").innerText = formatMoney(total);
+    document.getElementById("per-person-val").innerText = formatMoney(perPerson);
+}
+
+// Khởi chạy tính toán ngay khi trang web vừa tải xong
 document.addEventListener("DOMContentLoaded", function() {
-    const galleryContainer = document.getElementById("villa-gallery");
-    if (galleryContainer) {
-        let galleryHTML = "";
-        for (let i = 1; i <= 30; i++) {
-            galleryHTML += `
-                <div class="gallery-item">
-                    <img src="image/home${i}.jpg" alt="Không gian Villa - Góc ${i}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=500&q=80';">
-                    <span>Không gian Villa - Góc ${i}</span>
-                </div>
-            `;
-        }
-        galleryContainer.innerHTML = galleryHTML;
-    }
+    calculateBudget();
 });

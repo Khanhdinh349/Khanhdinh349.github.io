@@ -3,262 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Da Lat Retreat - June 2026</title>
+    <title>Lâm Hà Retreat | 09 - 12/07</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
     <header class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">DA LAT RETREAT</h1>
-            <p class="hero-date">12.06 - 14.06.2026</p>
-            <a href="#itinerary" class="btn-chill">Trải Nghiệm Ngay</a>
+            <h1 class="hero-title">LÂM HÀ RETREAT</h1>
+            <p class="hero-date">09/07 → 12/07 • 4 Ngày 3 Đêm</p>
+            <a href="#schedule-section" class="btn-chill">Xem Lịch Trình</a>
         </div>
     </header>
 
-    <section class="overview-section container">
-        <div class="stat-card">
-            <i class="fas fa-users"></i>
-            <h3>Thành Viên</h3>
-            <p class="stat-val">6 Người</p>
-            <span class="stat-desc">Chuyến đi gắn kết, trải nghiệm sâu</span>
-        </div>
-        <div class="stat-card">
-            <i class="fas fa-wallet"></i>
-            <h3>Chi Phí Tạm Tính</h3>
-            <p class="stat-val">~4.100.000đ</p>
-            <span class="stat-desc">Mỗi người (Đã gồm Villa trọn gói 2 đêm)</span>
-        </div>
-        <div class="stat-card">
-            <i class="fas fa-cloud-sun"></i>
-            <h3>Thời Tiết Dự Báo</h3>
-            <p id="weather-summary" class="stat-val">15°C - 23°C</p>
-            <span class="stat-desc">Mát mẻ, chiều tối se lạnh rực rỡ</span>
+    <section class="container" style="padding-top: 0; padding-bottom: 30px;">
+        <div class="overview-section">
+            <div class="stat-card">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h3>Thời gian</h3>
+                <div class="stat-val">09 - 12 / 07</div>
+                <div class="stat-desc">4 Ngày 3 Đêm hành trình</div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-car"></i>
+                <h3>Di chuyển</h3>
+                <div class="stat-val">Ô tô</div>
+                <div class="stat-desc">Chủ động đi lại</div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <h3>Nhiệt độ</h3>
+                <div class="stat-val">18°C - 25°C</div>
+                <div class="stat-desc">Thời tiết se lạnh cực chill</div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-house"></i>
+                <h3>Lưu trú</h3>
+                <div class="stat-val">Villa</div>
+                <div class="stat-desc">Đã có chỗ ở sẵn sàng</div>
+            </div>
         </div>
     </section>
 
-    <section id="itinerary" class="itinerary-section container">
-        <h2 class="section-title">Lịch Trình Chi Tiết</h2>
+    <section id="schedule-section" class="container">
+        <h2 class="section-title">LỊCH TRÌNH ĂN CHƠI</h2>
         
         <div class="day-tabs">
-            <button class="tab-btn active" onclick="openDay(event, 'day1')">Ngày 1 (12/06)</button>
-            <button class="tab-btn" onclick="openDay(event, 'day2')">Ngày 2 (13/06)</button>
-            <button class="tab-btn" onclick="openDay(event, 'day3')">Ngày 3 (14/06)</button>
+            <button class="tab-btn active" onclick="openDay(event, 'day1')">09/07 (Ngày 1)</button>
+            <button class="tab-btn" onclick="openDay(event, 'day2')">10/07 (Ngày 2)</button>
+            <button class="tab-btn" onclick="openDay(event, 'day3')">11/07 (Ngày 3)</button>
+            <button class="tab-btn" onclick="openDay(event, 'day4')">12/07 (Ngày 4)</button>
         </div>
 
         <div id="day1" class="tab-content active">
-            <h3 class="day-title">Ngày 1: Cao Tốc Phan Thiết - Đèo Đại Ninh - Lửa Trại BBQ</h3>
+            <h3 class="day-title">Ngày 1: Khởi hành & Ngắm hoàng hôn đồi chè</h3>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="time">05:30 - 11:30</div>
+                    <div class="time">06:00</div>
                     <div class="activity">
-                        <h4>Khởi hành bằng ô tô cá nhân</h4>
-                        <p>Xuất phát sớm, thong thả ôm tuyến Cao tốc Long Thành - Dầu Giây - Phan Thiết. Sau đó, xe chuyển hướng chinh phục Đèo Đại Ninh hoang sơ, ngắm nhìn núi non hùng vĩ ven đường lên xứ lạnh.</p>
+                        <h4>Xuất phát từ TP.HCM</h4>
+                        <p>Di chuyển bằng ô tô hướng về phía Lâm Hà, nghỉ ngơi ăn sáng dọc đường.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="time">12:00</div>
+                    <div class="time">11:30</div>
                     <div class="activity">
-                        <h4>Bữa trưa ấm cúng với Lẩu Gà Lá É</h4>
-                        <p>Dừng chân thưởng thức món lẩu gà đặc sản nức tiếng, sưởi ấm ngay cơ thể sau chặng đường dài cầm lái.</p>
+                        <h4>Thưởng thức Gà Đồi Lâm Hà</h4>
+                        <p>Ăn trưa với đặc sản gà đồi nướng cơm lam tại quán địa phương dọc tuyến đường vào huyện.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="time">14:00</div>
                     <div class="activity">
-                        <h4>Check-in Villa Nguyên Căn & Nghỉ ngơi</h4>
-                        <p>Di chuyển về khu Villa nhận nguyên căn, phân chia không gian sinh hoạt cho cả đoàn 6 người. Mọi người nghỉ ngơi, tự do tận hưởng khuôn viên yên bình và thư giãn tinh thần.</p>
+                        <h4>Check-in Nơi ở</h4>
+                        <p>Di chuyển về khu retreat/villa đã đặt trước để nhận phòng, dọn dẹp hành lý và nghỉ ngơi.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="time">18:30</div>
+                    <div class="time">16:00</div>
                     <div class="activity">
-                        <h4>Bữa Tiệc BBQ Giữa Khuôn Viên Villa</h4>
-                        <p>Thưởng thức thịt nướng bản gang thơm ngậy, khui vang đỏ ấm áp và trò chuyện sâu giữa tiết trời sương mờ se lạnh tại sân vườn riêng biệt của Villa.</p>
+                        <h4>Mê Linh Coffee Garden</h4>
+                        <p>Ghé quán cafe view đồi 360 độ cực đại, thưởng thức cafe chồn và ngắm hoàng hôn buông xuống thung lũng.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">19:00</div>
+                    <div class="activity">
+                        <h4>Tiệc BBQ ấm cúng</h4>
+                        <p>Trở về villa, tổ chức tiệc nướng ngoài trời trong không khí se lạnh của cao nguyên.</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="day2" class="tab-content">
-            <h3 class="day-title">Ngày 2: Săn Sương Sớm - Chiều Ốc Cay Nồng & Lẩu Cá Tầm</h3>
+            <h3 class="day-title">Ngày 2: Khám phá Thác Voi hùng vĩ & Cafe rừng</h3>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="time">07:30</div>
+                    <div class="time">08:00</div>
                     <div class="activity">
-                        <h4>Chào ngày mới với Bánh mì xíu mại</h4>
-                        <p>Tận hưởng bữa sáng ấm lòng với những bát xíu mại ngập hành cay thơm lừng kèm chiếc bánh mì vừa nướng giòn.</p>
+                        <h4>Ăn sáng bánh căn</h4>
+                        <p>Nạp năng lượng bằng món bánh căn nóng hổi chuẩn vị Lâm Đồng.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="time">10:00</div>
+                    <div class="time">09:30</div>
                     <div class="activity">
-                        <h4>Cà phê Túi Mơ To thơ mộng</h4>
-                        <p>Chọn một góc thật chill dưới giàn cúc họa mi trắng muốt, thong thả thưởng thức ly nước ấm và nhìn ngắm thung lũng lộng gió cùng đoàn.</p>
+                        <h4>The Wilder Nest</h4>
+                        <p>Thả mình vào không gian cafe giữa rừng thông tĩnh lặng, chụp ảnh check-in đồi cỏ hoang sơ.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="time">15:00</div>
+                    <div class="time">13:30</div>
                     <div class="activity">
-                        <h4>Thưởng thức Ốc nhồi thịt & Ốc mâm Đà Lạt</h4>
-                        <p>Chiều se lạnh ghé quán ốc đặc sản. Thưởng thức những thố ốc nhồi thịt bốc khói nghi ngút thơm mùi sả, chấm nước mắm gừng cay nồng sưởi ấm vị giác cực đã.</p>
+                        <h4>Chinh phục Thác Voi</h4>
+                        <p>Tham quan ngọn thác hùng vĩ, khám phá những hang đá tự nhiên độc đáo dưới chân thác.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">15:30</div>
+                    <div class="activity">
+                        <h4>Viếng Chùa Linh Ẩn</h4>
+                        <p>Ngay cạnh Thác Voi, chiêm bái tượng Phật Quan Âm khổng lồ lộ thiên lớn nhất Việt Nam.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="time">18:30</div>
                     <div class="activity">
-                        <h4>Bữa tối Lẩu Cá Tầm Ngư Sơn nóng hổi</h4>
-                        <p>Quây quần bên nồi lẩu cá tầm nghi ngút khói, thịt cá sần sật ngọt lịm hòa cùng nước dùng chua cay đậm đà, kết thúc ngày thứ 2 trọn vẹn vị giác.</p>
+                        <h4>Lẩu gà lá é nóng hổi</h4>
+                        <p>Xì xụp nồi lẩu gà lá é thơm nồng giữa tiết trời buổi tối lộng gió.</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="day3" class="tab-content">
-            <h3 class="day-title">Ngày 3: Khép Lại Hành Trình Wellness Bình Yên</h3>
+            <h3 class="day-title">Ngày 3: Sống chậm tại Hồ Phúc Thọ & Board Game</h3>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="time">08:30</div>
+                    <div class="time">09:00</div>
                     <div class="activity">
-                        <h4>Sáng bình yên tại không gian Villa</h4>
-                        <p>Tự tay pha chế, nhâm nhi ly cà phê nóng và tận hưởng trọn vẹn không gian xanh mướt, tĩnh lặng của Villa trước giờ dọn dẹp hành lý.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">11:30</div>
-                    <div class="activity">
-                        <h4>Check-out & Ăn trưa Nem nướng</h4>
-                        <p>Bàn giao Villa, di chuyển đi ăn Nem nướng Bà Hùng nóng giòn với nước tương chấm đặc quánh béo ngậy ngon tuyệt hảo.</p>
+                        <h4>Thư giãn tự do</h4>
+                        <p>Dành buổi sáng ngủ nướng, đọc sách hoặc thưởng thức ly cafe phin tự pha ngay tại khuôn viên retreat.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="time">14:00</div>
                     <div class="activity">
-                        <h4>Ghé mua đặc sản & Trở về thành phố</h4>
-                        <p>Sưu tầm một ít mứt sấy, hoa quả tươi tại L'angfarm trước khi lên ô tô khởi hành đổ đèo về lại thành phố.</p>
+                        <h4>Cắm trại hoàng hôn Hồ Phúc Thọ</h4>
+                        <p>Di chuyển ra bờ hồ Phúc Thọ thơ mộng, setup ghế thung lũng đón gió và ngắm khoảnh khắc hoàng hôn nhuộm đỏ mặt hồ.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">19:00</div>
+                    <div class="activity">
+                        <h4>Đêm Board Game & Rượu ấm</h4>
+                        <p>Quây quần bên không gian chung tại villa, chơi Ma Sói, Avalon kết hợp ăn nhẹ và tâm sự.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="day4" class="tab-content">
+            <h3 class="day-title">Ngày 4: Gom quà đặc sản & Trở về</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time">08:30</div>
+                    <div class="activity">
+                        <h4>Ăn sáng phở nóng</h4>
+                        <p>Thưởng thức tô phở bò nghi ngút khói trước khi dọn đồ đạc dời đi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">10:30</div>
+                    <div class="activity">
+                        <h4>Mua sắm đặc sản Lâm Hà</h4>
+                        <p>Ghé chợ hoặc các nông trại để chọn mua Cà phê nguyên chất, Mật ong rừng và Bơ sáp mang về làm quà.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">13:00</div>
+                    <div class="activity">
+                        <h4>Khởi hành về lại TP.HCM</h4>
+                        <p>Tạm biệt Lâm Hà, xe lăn bánh đưa cả đoàn trở lại nhịp sống thành thị sôi động.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="food-section container">
-        <h2 class="section-title">Bản Đồ Ẩm Thực Đà Lạt</h2>
+    <section class="container" style="background: #fdfdfd; border-radius: 20px;">
+        <h2 class="section-title">ĐỊA ĐIỂM NỔI BẬT</h2>
         <div class="food-grid">
             <div class="food-card">
                 <div class="food-card-img">
-                    <img src="https://kalite.vn/wp-content/uploads/2024/12/402598452_7004207222975681_6403554273470642148_n-2.jpg" alt="Lẩu gà lá é">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Mê Linh Coffee">
                 </div>
                 <div class="food-card-body">
-                    <h3>Lẩu Gà Lá É Tao Ngộ</h3>
-                    <div class="food-address"><i class="fas fa-map-marker-alt"></i> Số 5 Đường 3 Tháng 4, Đà Lạt</div>
-                    <p>Hương vị gà ta dai giòn quyện với vị cay nồng đặc trưng của ớt xiêm xanh và vị thơm ấm áp của lá é.</p>
+                    <h3>Mê Linh Coffee Garden</h3>
+                    <div class="food-address"><i class="fa-solid fa-location-dot"></i> ĐT725, Tà Nung, Lâm Hà</div>
+                    <p>Tổ hợp cafe check-in quy mô bậc nhất khu vực với view trọn đồi chè và thung lũng hoa rộng lớn.</p>
                 </div>
             </div>
-
             <div class="food-card">
                 <div class="food-card-img">
-                    <img src="https://danangbest.com/upload_content/lau-ca-tam-ngu-son-4.jpg" alt="Lẩu cá tầm Đà Lạt">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600" alt="Thác Voi">
                 </div>
                 <div class="food-card-body">
-                    <h3>Lẩu Cá Tầm Ngư Sơn</h3>
-                    <div class="food-address"><i class="fas fa-map-marker-alt"></i> 33/15/3 Hùng Vương, Phường 9, Đà Lạt</div>
-                    <p>Thớ thịt cá tầm trắng mịn, sụn cá giòn sần sật nhúng trong nước lẩu măng chua cay ấm lòng vùng cao.</p>
+                    <h3>Thác Voi & Chùa Linh Ẩn</h3>
+                    <div class="food-address"><i class="fa-solid fa-location-dot"></i> Thị trấn Nam Ban, Lâm Hà</div>
+                    <p>Khu danh thắng đậm chất hoang sơ hoành tráng kết hợp chiêm bái tượng Phật lớn sừng sững giữa trời mây.</p>
                 </div>
             </div>
-
             <div class="food-card">
                 <div class="food-card-img">
-                    <img src="https://static.vinwonders.com/production/oc-nhoi-thit-da-lat-9.jpg" alt="Ốc nhồi thịt Đà Lạt">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Hồ Phúc Thọ">
                 </div>
                 <div class="food-card-body">
-                    <h3>Ốc Nhồi Thịt 33</h3>
-                    <div class="food-address"><i class="fas fa-map-marker-alt"></i> 33 Hai Bà Trưng, Phường 6, Đà Lạt</div>
-                    <p>Ốc bươu nhồi thịt băm đậm đà xen lẫn mỡ chài, hấp chung với sả tạo mùi thơm lừng khói nghi ngút chấm mắm gừng siêu đỉnh.</p>
+                    <h3>Hồ Phúc Thọ</h3>
+                    <div class="food-address"><i class="fa-solid fa-location-dot"></i> Xã Phúc Thọ, Lâm Hà</div>
+                    <p>Hồ nước trong xanh lãng mạn, địa điểm lý tưởng để trốn khỏi đám đông ồn ào và ngắm hoàng hôn buông lơi.</p>
                 </div>
             </div>
-
             <div class="food-card">
                 <div class="food-card-img">
-                    <img src="https://exotrails.com/explore/wp-content/uploads/2025/01/Nem-nuong-Ba-Hung.webp" alt="Nem nướng Bà Hùng">
+                    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=600" alt="The Wilder Nest">
                 </div>
                 <div class="food-card-body">
-                    <h3>Nem Nướng Bà Hùng</h3>
-                    <div class="food-address"><i class="fas fa-map-marker-alt"></i> 328 Phan Đình Phùng, Đà Lạt</div>
-                    <p>Sự kết hợp tinh tế giữa nem nướng thơm nức mũi trên than củi, bánh tráng chiên giòn và rau sống tươi ngon.</p>
+                    <h3>The Wilder Nest</h3>
+                    <div class="food-address"><i class="fa-solid fa-location-dot"></i> Đường vành đai hồ Tuyền Lâm/Lâm Hà</div>
+                    <p>Quán cafe ẩn mình yên bình giữa thiên nhiên hoang dã, không gian thích hợp để chữa lành tâm hồn.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="memories-section container">
-        <h2 class="section-title">Không Gian Villa Nguyên Căn</h2>
-        
-        <div class="room-category-block">
-            <h3 class="room-category-title">Kiến Trúc & Tiện Ích Đẳng Cấp</h3>
-            <p class="room-category-desc">Bộ sưu tập hình ảnh thực tế ghi lại trọn vẹn từng góc phối cảnh, khuôn viên sân vườn sinh hoạt chung và nội thất chi tiết của Villa (Từ home1 đến home45).</p>
-            
-            <div class="hotel-gallery-grid" id="villa-gallery">
-                <!-- Mã script tự động lặp 45 ảnh từ home1 đến home45 -->
-            </div>
-        </div>
-    </section>
-
-    <section class="budget-section container">
-        <h2 class="section-title">Bảng Chi Phí Dự Kiến (6 Người)</h2>
-        <blockquote>
-            <i class="fas fa-info-circle"></i> <strong>Lưu ý vận hành:</strong> Chi phí thuê Villa được chốt cố định theo giá 5.000.000đ/đêm (Tổng 2 đêm là 10.000.000đ). Hạng mục ăn uống, café được tính dựa theo định mức thực tế chia đều cho 6 thành viên.
+    <section class="container">
+        <h2 class="section-title">KẾ HOẠCH CHI PHÍ</h2>
+        <blockquote style="margin-bottom: 25px;">
+            <i class="fa-solid fa-circle-info"></i> Lưu ý: Toàn bộ chi phí dưới đây mang tính chất tạm tính cho việc ăn chơi, di chuyển và chi tiêu chung của cả đoàn (chưa bao gồm tiền phòng).
         </blockquote>
-        <br>
+        
         <div class="budget-table-wrapper">
             <table>
                 <thead>
                     <tr>
-                        <th>Hạng Mục Chi Phí</th>
-                        <th>Chi Tiết Phân Chia</th>
-                        <th>Tổng Chi Phí (VND)</th>
+                        <th>Hạng mục chi tiêu</th>
+                        <th class="text-right">Dự toán ngân sách (VNĐ)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Villa Nguyên Căn Cao Cấp</strong></td>
-                        <td>Thuê trọn gói nguyên căn hộ dành cho đoàn (5.000.000đ / đêm × 2 đêm)</td>
-                        <td>10.000.000đ</td>
+                        <td>Xăng xe / Di chuyển di động</td>
+                        <td class="col-money">
+                            <input type="number" id="cost-car" class="money" value="2500000" oninput="calculateBudget()">
+                        </td>
                     </tr>
                     <tr>
-                        <td>Di chuyển Ô tô cá nhân</td>
-                        <td>Chi phí nhiên liệu xăng xe + Phí cầu đường cao tốc liên tỉnh cho đoàn</td>
-                        <td>2.000.000đ</td>
+                        <td>Ăn uống (Bữa chính: Gà đồi, Lẩu gà lá é,...)</td>
+                        <td class="col-money">
+                            <input type="number" id="cost-food" class="money" value="4000000" oninput="calculateBudget()">
+                        </td>
                     </tr>
                     <tr>
-                        <td>Ăn uống đặc sản & Tiệc BBQ</td>
-                        <td>Ước tính ăn chơi thoải mái, đầy đủ đặc sản: 1.100.000đ / người</td>
-                        <td>6.600.000đ</td>
+                        <td>Chi phí đi Cafe (Mê Linh, Wilder Nest)</td>
+                        <td class="col-money">
+                            <input type="number" id="cost-cafe" class="money" value="1000000" oninput="calculateBudget()">
+                        </td>
                     </tr>
                     <tr>
-                        <td>Quán cà phê & Vé check-in</td>
-                        <td>Chi phí nước uống và các điểm dừng chân: 500.000đ / người</td>
-                        <td>3.000.000đ</td>
+                        <td>Thực phẩm tổ chức tiệc BBQ tối</td>
+                        <td class="col-money">
+                            <input type="number" id="cost-bbq" class="money" value="1500000" oninput="calculateBudget()">
+                        </td>
                     </tr>
                     <tr>
-                        <td>Quỹ phát sinh dự phòng đoàn</td>
-                        <td>Hạng mục chung đảm bảo an toàn vận hành, xử lý tình huống phát sinh</td>
-                        <td>3.000.000đ</td>
+                        <td>Chi phí phát sinh dự phòng</td>
+                        <td class="col-money">
+                            <input type="number" id="cost-other" class="money" value="1000000" oninput="calculateBudget()">
+                        </td>
                     </tr>
                     <tr class="total-row">
-                        <td>TỔNG CHI PHÍ DỰ KIẾN CẢ ĐOÀN</td>
-                        <td>Trọn gói tất cả các hạng mục (Cố định + Biến đổi)</td>
-                        <td>24.600.000đ</td>
+                        <td>TỔNG CHI PHÍ DỰ KIẾN</td>
+                        <td id="total-val" class="text-right">0 VNĐ</td>
                     </tr>
                     <tr class="per-person-row">
-                        <td>TRUNG BÌNH MỖI NGƯỜI ĐI</td>
-                        <td>Tổng chi phí toàn đoàn / 6 thành viên thực tế</td>
-                        <td>4.100.000đ</td>
+                        <td>
+                            CHIA ĐỀU CHO SỐ NGƯỜI: 
+                            <input id="people" type="number" value="2" min="1" class="input-people" oninput="calculateBudget()">
+                        </td>
+                        <td id="per-person-val" class="text-right">0 VNĐ</td>
                     </tr>
                 </tbody>
             </table>
@@ -266,9 +304,9 @@
     </section>
 
     <footer>
-        <p>Created with 🤍 for Da Lat Retreat Team | 2026</p>
+        <p>Designed for Lâm Hà Retreat 2026 ❤️</p>
     </footer>
 
-    <script src="script.js?v=2.1"></script>
+    <script src="script.js"></script>
 </body>
 </html>
