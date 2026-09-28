@@ -1,312 +1,692 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lâm Hà Retreat | 09 - 12/07</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Retreat Hodota Cam Bình Resort & Spa (03/10 - 04/10/2026)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            700: '#0e7490',
+                            800: '#155e75',
+                            900: '#164e63',
+                        },
+                        sand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.75)), 
+                        url('/image/bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-ocean-500 selection:text-white">
 
-    <header class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">LÂM HÀ RETREAT</h1>
-            <p class="hero-date">09/07 → 12/07 • 4 Ngày 3 Đêm</p>
-            <a href="#schedule-section" class="btn-chill">Xem Lịch Trình</a>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-ocean-600 text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-ocean-600/30">
+                    H
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900 block leading-none">HODOTA</span>
+                    <span class="text-xs text-ocean-600 font-semibold tracking-wider uppercase">Cam Bình Resort & Spa</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#about" class="hover:text-ocean-600 transition-colors">Giới Thiệu</a>
+                <a href="#combo" class="hover:text-ocean-600 transition-colors">Combo Trọn Gói</a>
+                <a href="#lunch" class="hover:text-ocean-600 transition-colors flex items-center gap-1 text-amber-600 font-bold">
+                    <i class="fa-solid fa-bowl-rice"></i> Set Menu Bữa Trưa
+                </a>
+                <a href="#menu" class="hover:text-ocean-600 transition-colors">Ẩm Thực</a>
+                <a href="#room" class="hover:text-ocean-600 transition-colors">Phòng Nghỉ</a>
+                <a href="#schedule" class="hover:text-ocean-600 transition-colors">Lịch Dịch Vụ</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="tel:0911593848" class="flex items-center gap-2 bg-gradient-to-r from-ocean-600 to-sky-600 text-white px-4 py-2.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all hover:scale-105">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="hidden sm:inline">0911 593 848</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="about" class="hero-bg min-h-screen pt-28 pb-16 px-4 sm:px-6 flex items-center relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center text-white relative z-10 w-full">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-emerald-300 font-semibold text-sm mb-6 animate-pulse">
+                <i class="fa-solid fa-calendar-days"></i> CHUYẾN ĐI RETREAT SẮP DIỄN RA
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight mb-4 text-white">
+                RETREAT HODOTA CAM BÌNH
+            </h1>
+            <p class="text-xl sm:text-2xl text-ocean-100 font-medium mb-8 max-w-2xl mx-auto">
+                03/10/2026 – 04/10/2026 | Tận Hưởng Kỳ Nghỉ Trọn Vẹn Cùng Thiên Nhiên
+            </p>
+
+            <!-- Quick Location Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left max-w-4xl mx-auto mb-10">
+                <div class="glass-card p-5 rounded-2xl text-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-ocean-100 text-ocean-700 flex items-center justify-center text-lg font-bold mb-3">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-1">Địa Chỉ Resort</h3>
+                    <p class="text-sm text-slate-600">Đường Lê Minh Công, Tân Phước, Lagi, Bình Thuận</p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl text-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-lg font-bold mb-3">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-1">Khoảng Cách & Di Chuyển</h3>
+                    <p class="text-sm text-slate-600">Cách TP.HCM ~130km. Chỉ 2 – 2.5 tiếng qua Cao tốc Dầu Giây – Phan Thiết.</p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl text-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg font-bold mb-3">
+                        <i class="fa-solid fa-map"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-1">Chỉ Đường Google Maps</h3>
+                    <a href="https://maps.app.goo.gl/ZBX54285LzE8tBLWA" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-bold text-ocean-600 hover:text-ocean-700 mt-1">
+                        Xem Bản Đồ Google <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#lunch" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-3">
+                    <i class="fa-solid fa-bowl-rice text-xl"></i> XEM SET MENU BỮA TRƯA 04/10
+                </a>
+                <a href="https://maps.app.goo.gl/ZBX54285LzE8tBLWA" target="_blank" class="bg-white/20 hover:bg-white/30 border border-white/40 text-white font-bold px-8 py-4 rounded-2xl backdrop-blur-md transition-all flex items-center gap-3">
+                    <i class="fa-solid fa-compass text-xl"></i> Dẫn Đường Maps
+                </a>
+            </div>
         </div>
     </header>
 
-    <section class="container" style="padding-top: 0; padding-bottom: 30px;">
-        <div class="overview-section">
-            <div class="stat-card">
-                <i class="fa-solid fa-calendar-days"></i>
-                <h3>Thời gian</h3>
-                <div class="stat-val">09 - 12 / 07</div>
-                <div class="stat-desc">4 Ngày 3 Đêm hành trình</div>
+    <!-- Overview Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Sơ Đồ Tổng Quan & Cảnh Quan Resort</h2>
+                <p class="mt-3 text-lg text-slate-600">Khám phá không gian xanh mát, bãi biển riêng thơ mộng cùng hàng loạt khu vui chơi giải trí tại Hodota Cam Bình.</p>
             </div>
-            <div class="stat-card">
-                <i class="fa-solid fa-car"></i>
-                <h3>Di chuyển</h3>
-                <div class="stat-val">Ô tô</div>
-                <div class="stat-desc">Chủ động đi lại</div>
-            </div>
-            <div class="stat-card">
-                <i class="fa-solid fa-cloud-sun"></i>
-                <h3>Nhiệt độ</h3>
-                <div class="stat-val">18°C - 25°C</div>
-                <div class="stat-desc">Thời tiết se lạnh cực chill</div>
-            </div>
-            <div class="stat-card">
-                <i class="fa-solid fa-house"></i>
-                <h3>Lưu trú</h3>
-                <div class="stat-val">Villa</div>
-                <div class="stat-desc">Đã có chỗ ở sẵn sàng</div>
-            </div>
-        </div>
-    </section>
 
-    <section id="schedule-section" class="container">
-        <h2 class="section-title">LỊCH TRÌNH ĂN CHƠI</h2>
-        
-        <div class="day-tabs">
-            <button class="tab-btn active" onclick="openDay(event, 'day1')">09/07 (Ngày 1)</button>
-            <button class="tab-btn" onclick="openDay(event, 'day2')">10/07 (Ngày 2)</button>
-            <button class="tab-btn" onclick="openDay(event, 'day3')">11/07 (Ngày 3)</button>
-            <button class="tab-btn" onclick="openDay(event, 'day4')">12/07 (Ngày 4)</button>
-        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Master Plan Map -->
+                <div class="relative group rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80">
+                    <img src="/image/tongquan.jpg" alt="Sơ đồ Hodota Resort" class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <span class="bg-ocean-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Sơ Đồ Tổng Quan</span>
+                            <h3 class="text-xl font-bold text-white">Toàn Cảnh Khung Cảnh Hodota Resort & Spa</h3>
+                            <p class="text-slate-200 text-sm mt-1">Gồm tòa khách sạn, chuỗi căn Suite riêng biệt, khu lều Lotus, hồ sinh thái và bãi biển Đông.</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div id="day1" class="tab-content active">
-            <h3 class="day-title">Ngày 1: Khởi hành & Ngắm hoàng hôn đồi chè</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="time">06:00</div>
-                    <div class="activity">
-                        <h4>Xuất phát từ TP.HCM</h4>
-                        <p>Di chuyển bằng ô tô hướng về phía Lâm Hà, nghỉ ngơi ăn sáng dọc đường.</p>
+                <!-- Resort Landscape Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="rounded-2xl overflow-hidden shadow-md h-48 relative group">
+                        <img src="/image/sanvuon.jpg" alt="Khuôn viên Resort" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-2 left-2 right-2 bg-slate-900/60 backdrop-blur-sm p-2 rounded-lg text-white text-xs font-semibold text-center">
+                            Không Gian Sân Vườn
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">11:30</div>
-                    <div class="activity">
-                        <h4>Thưởng thức Gà Đồi Lâm Hà</h4>
-                        <p>Ăn trưa với đặc sản gà đồi nướng cơm lam tại quán địa phương dọc tuyến đường vào huyện.</p>
+                    <div class="rounded-2xl overflow-hidden shadow-md h-48 relative group">
+                        <img src="/image/baibien.jpg" alt="Bãi biển Hodota" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-2 left-2 right-2 bg-slate-900/60 backdrop-blur-sm p-2 rounded-lg text-white text-xs font-semibold text-center">
+                            Bãi Biển Riêng Thơ Mộng
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">14:00</div>
-                    <div class="activity">
-                        <h4>Check-in Nơi ở</h4>
-                        <p>Di chuyển về khu retreat/villa đã đặt trước để nhận phòng, dọn dẹp hành lý và nghỉ ngơi.</p>
+                    <div class="rounded-2xl overflow-hidden shadow-md h-48 relative group">
+                        <img src="/image/sup_sipline.jpg" alt="Chèo SUP Hồ Sinh Thái" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-2 left-2 right-2 bg-slate-900/60 backdrop-blur-sm p-2 rounded-lg text-white text-xs font-semibold text-center">
+                            Chèo SUP & Zipline
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">16:00</div>
-                    <div class="activity">
-                        <h4>Mê Linh Coffee Garden</h4>
-                        <p>Ghé quán cafe view đồi 360 độ cực đại, thưởng thức cafe chồn và ngắm hoàng hôn buông xuống thung lũng.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">19:00</div>
-                    <div class="activity">
-                        <h4>Tiệc BBQ ấm cúng</h4>
-                        <p>Trở về villa, tổ chức tiệc nướng ngoài trời trong không khí se lạnh của cao nguyên.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="day2" class="tab-content">
-            <h3 class="day-title">Ngày 2: Khám phá Thác Voi hùng vĩ & Cafe rừng</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="time">08:00</div>
-                    <div class="activity">
-                        <h4>Ăn sáng bánh căn</h4>
-                        <p>Nạp năng lượng bằng món bánh căn nóng hổi chuẩn vị Lâm Đồng.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">09:30</div>
-                    <div class="activity">
-                        <h4>The Wilder Nest</h4>
-                        <p>Thả mình vào không gian cafe giữa rừng thông tĩnh lặng, chụp ảnh check-in đồi cỏ hoang sơ.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">13:30</div>
-                    <div class="activity">
-                        <h4>Chinh phục Thác Voi</h4>
-                        <p>Tham quan ngọn thác hùng vĩ, khám phá những hang đá tự nhiên độc đáo dưới chân thác.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">15:30</div>
-                    <div class="activity">
-                        <h4>Viếng Chùa Linh Ẩn</h4>
-                        <p>Ngay cạnh Thác Voi, chiêm bái tượng Phật Quan Âm khổng lồ lộ thiên lớn nhất Việt Nam.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">18:30</div>
-                    <div class="activity">
-                        <h4>Lẩu gà lá é nóng hổi</h4>
-                        <p>Xì xụp nồi lẩu gà lá é thơm nồng giữa tiết trời buổi tối lộng gió.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="day3" class="tab-content">
-            <h3 class="day-title">Ngày 3: Sống chậm tại Hồ Phúc Thọ & Board Game</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="time">09:00</div>
-                    <div class="activity">
-                        <h4>Thư giãn tự do</h4>
-                        <p>Dành buổi sáng ngủ nướng, đọc sách hoặc thưởng thức ly cafe phin tự pha ngay tại khuôn viên retreat.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">14:00</div>
-                    <div class="activity">
-                        <h4>Cắm trại hoàng hôn Hồ Phúc Thọ</h4>
-                        <p>Di chuyển ra bờ hồ Phúc Thọ thơ mộng, setup ghế thung lũng đón gió và ngắm khoảnh khắc hoàng hôn nhuộm đỏ mặt hồ.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">19:00</div>
-                    <div class="activity">
-                        <h4>Đêm Board Game & Rượu ấm</h4>
-                        <p>Quây quần bên không gian chung tại villa, chơi Ma Sói, Avalon kết hợp ăn nhẹ và tâm sự.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="day4" class="tab-content">
-            <h3 class="day-title">Ngày 4: Gom quà đặc sản & Trở về</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="time">08:30</div>
-                    <div class="activity">
-                        <h4>Ăn sáng phở nóng</h4>
-                        <p>Thưởng thức tô phở bò nghi ngút khói trước khi dọn đồ đạc dời đi.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">10:30</div>
-                    <div class="activity">
-                        <h4>Mua sắm đặc sản Lâm Hà</h4>
-                        <p>Ghé chợ hoặc các nông trại để chọn mua Cà phê nguyên chất, Mật ong rừng và Bơ sáp mang về làm quà.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">13:00</div>
-                    <div class="activity">
-                        <h4>Khởi hành về lại TP.HCM</h4>
-                        <p>Tạm biệt Lâm Hà, xe lăn bánh đưa cả đoàn trở lại nhịp sống thành thị sôi động.</p>
+                    <div class="rounded-2xl overflow-hidden shadow-md h-48 relative group">
+                        <img src="/image/hoboi.jpg" alt="Hồ Bơi Resort" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-2 left-2 right-2 bg-slate-900/60 backdrop-blur-sm p-2 rounded-lg text-white text-xs font-semibold text-center">
+                            Hồ Bơi & Vui Chơi
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container" style="background: #fdfdfd; border-radius: 20px;">
-        <h2 class="section-title">ĐỊA ĐIỂM NỔI BẬT</h2>
-        <div class="food-grid">
-            <div class="food-card">
-                <div class="food-card-img">
-                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Mê Linh Coffee">
-                </div>
-                <div class="food-card-body">
-                    <h3>Mê Linh Coffee Garden</h3>
-                    <div class="food-address"><i class="fa-solid fa-location-dot"></i> ĐT725, Tà Nung, Lâm Hà</div>
-                    <p>Tổ hợp cafe check-in quy mô bậc nhất khu vực với view trọn đồi chè và thung lũng hoa rộng lớn.</p>
-                </div>
+    <!-- Combo 2N1Đ Package Details -->
+    <section id="combo" class="py-16 bg-slate-100/70 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-ocean-600 font-extrabold text-sm uppercase tracking-widest">Trải Nghiệm Trọn Vẹn</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mt-1">COMBO TRỌN GÓI 2N1Đ BAO GỒM</h2>
+                <p class="mt-2 text-slate-600">Thoải mái tận hưởng các tiện ích đẳng cấp cùng đầy đủ các bữa ăn trong chuyến nghỉ dưỡng.</p>
             </div>
-            <div class="food-card">
-                <div class="food-card-img">
-                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600" alt="Thác Voi">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Accommodation -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow relative overflow-hidden">
+                    <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Phòng Nghỉ Dưỡng</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Nghỉ ngơi tại căn **Suite Garden View** thiết kế riêng biệt hiện đại, trang bị đầy đủ tiện nghi tiêu chuẩn cao cấp.
+                    </p>
+                    <ul class="text-sm text-slate-700 space-y-2 font-medium">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> Villa 4 phòng riêng biệt</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> View sân vườn xanh mát</li>
+                    </ul>
                 </div>
-                <div class="food-card-body">
-                    <h3>Thác Voi & Chùa Linh Ẩn</h3>
-                    <div class="food-address"><i class="fa-solid fa-location-dot"></i> Thị trấn Nam Ban, Lâm Hà</div>
-                    <p>Khu danh thắng đậm chất hoang sơ hoành tráng kết hợp chiêm bái tượng Phật lớn sừng sững giữa trời mây.</p>
+
+                <!-- Card 2: Dining -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow relative overflow-hidden ring-2 ring-amber-500/30">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <span class="absolute top-4 right-4 bg-amber-500 text-slate-900 font-bold text-xs px-3 py-1 rounded-full">3 Bữa Ăn + Quà Tặng</span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Ẩm Thực Đa Dạng</h3>
+                    <ul class="text-sm text-slate-700 space-y-3 font-medium">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-fire text-amber-500 mt-1"></i>
+                            <span><b>1 Bữa tối BBQ:</b> Hải sản tươi ngon chuẩn vị biển.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-mug-hot text-amber-500 mt-1"></i>
+                            <span><b>1 Bữa sáng:</b> Theo menu hoặc Buffet (>45 khách).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-bowl-rice text-amber-500 mt-1"></i>
+                            <span><b>1 Bữa trưa:</b> Set cơm trưa 5 món + cơm trắng, trà đá & trái cây tráng miệng.</span>
+                        </li>
+                        <li class="p-3 bg-amber-50 rounded-xl text-amber-800 text-xs border border-amber-200">
+                            <strong><i class="fa-solid fa-gift"></i> Đặc biệt Thứ 7 / Lễ Tết:</strong> Tặng thêm 1 bữa Buffet <i>Ẩm thực quê hương</i> (15h-16h) ngày check-in.
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="food-card">
-                <div class="food-card-img">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Hồ Phúc Thọ">
-                </div>
-                <div class="food-card-body">
-                    <h3>Hồ Phúc Thọ</h3>
-                    <div class="food-address"><i class="fa-solid fa-location-dot"></i> Xã Phúc Thọ, Lâm Hà</div>
-                    <p>Hồ nước trong xanh lãng mạn, địa điểm lý tưởng để trốn khỏi đám đông ồn ào và ngắm hoàng hôn buông lơi.</p>
-                </div>
-            </div>
-            <div class="food-card">
-                <div class="food-card-img">
-                    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=600" alt="The Wilder Nest">
-                </div>
-                <div class="food-card-body">
-                    <h3>The Wilder Nest</h3>
-                    <div class="food-address"><i class="fa-solid fa-location-dot"></i> Đường vành đai hồ Tuyền Lâm/Lâm Hà</div>
-                    <p>Quán cafe ẩn mình yên bình giữa thiên nhiên hoang dã, không gian thích hợp để chữa lành tâm hồn.</p>
+
+                <!-- Card 3: Free Activities -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow relative overflow-hidden">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-person-swimming"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Trải Nghiệm Giải Trí & Thể Thao</h3>
+                    <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-700">
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-lg"><i class="fa-solid fa-water text-ocean-600 mr-1"></i> Chèo Thuyền SUP</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-lg"><i class="fa-solid fa-umbrella-beach text-amber-600 mr-1"></i> Tắm Biển & Hồ Bơi Riêng</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-lg"><i class="fa-solid fa-bullseye text-red-500 mr-1"></i> Bắn Cung Thể Thao</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-lg"><i class="fa-solid fa-table-tennis-paddle-ball text-emerald-600 mr-1"></i> Pickleball & Cầu Lông</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-lg"><i class="fa-solid fa-cable-car text-purple-600 mr-1"></i> Đu Dây Mạo Hiểm Zipline</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-lg"><i class="fa-solid fa-fish text-sky-600 mr-1"></i> Câu Cá Dã Ngoại</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-lg"><i class="fa-solid fa-van-shuttle text-indigo-600 mr-1"></i> Xe Điện Di Chuyển Nội Khu</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-lg"><i class="fa-solid fa-compass-drafting text-yellow-600 mr-1"></i> Phi Tiêu Giải Trí</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container">
-        <h2 class="section-title">KẾ HOẠCH CHI PHÍ</h2>
-        <blockquote style="margin-bottom: 25px;">
-            <i class="fa-solid fa-circle-info"></i> Lưu ý: Toàn bộ chi phí dưới đây mang tính chất tạm tính cho việc ăn chơi, di chuyển và chi tiêu chung của cả đoàn (chưa bao gồm tiền phòng).
-        </blockquote>
-        
-        <div class="budget-table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hạng mục chi tiêu</th>
-                        <th class="text-right">Dự toán ngân sách (VNĐ)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Xăng xe / Di chuyển di động</td>
-                        <td class="col-money">
-                            <input type="number" id="cost-car" class="money" value="2500000" oninput="calculateBudget()">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Ăn uống (Bữa chính: Gà đồi, Lẩu gà lá é,...)</td>
-                        <td class="col-money">
-                            <input type="number" id="cost-food" class="money" value="4000000" oninput="calculateBudget()">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chi phí đi Cafe (Mê Linh, Wilder Nest)</td>
-                        <td class="col-money">
-                            <input type="number" id="cost-cafe" class="money" value="1000000" oninput="calculateBudget()">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Thực phẩm tổ chức tiệc BBQ tối</td>
-                        <td class="col-money">
-                            <input type="number" id="cost-bbq" class="money" value="1500000" oninput="calculateBudget()">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chi phí phát sinh dự phòng</td>
-                        <td class="col-money">
-                            <input type="number" id="cost-other" class="money" value="1000000" oninput="calculateBudget()">
-                        </td>
-                    </tr>
-                    <tr class="total-row">
-                        <td>TỔNG CHI PHÍ DỰ KIẾN</td>
-                        <td id="total-val" class="text-right">0 VNĐ</td>
-                    </tr>
-                    <tr class="per-person-row">
-                        <td>
-                            CHIA ĐỀU CHO SỐ NGƯỜI: 
-                            <input id="people" type="number" value="2" min="1" class="input-people" oninput="calculateBudget()">
-                        </td>
-                        <td id="per-person-val" class="text-right">0 VNĐ</td>
-                    </tr>
-                </tbody>
-            </table>
+    <!-- Set Menu Bữa Trưa (Chủ Nhật 04/10) -->
+    <section id="lunch" class="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-ocean-900 text-white relative overflow-hidden">
+        <!-- Background Light Effects -->
+        <div class="absolute -top-24 right-0 w-[28rem] h-[28rem] bg-ocean-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 left-0 w-[28rem] h-[28rem] bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-flex items-center gap-2 text-amber-300 font-bold text-xs uppercase tracking-[0.3em]">
+                    <span class="w-8 h-px bg-amber-400/60"></span> Bữa trưa 04/10/2026 <span class="w-8 h-px bg-amber-400/60"></span>
+                </span>
+                <h2 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-white">SET MENU BỮA TRƯA</h2>
+                <p class="mt-4 text-slate-300 text-lg leading-relaxed">
+                    Năm món đậm đà hương vị biển và đồng quê, dùng kèm cơm trắng, trà đá cùng trái cây tráng miệng.
+                </p>
+            </div>
+
+            <!-- Menu Card -->
+            <div class="max-w-4xl mx-auto rounded-[2rem] p-px bg-gradient-to-br from-amber-400/60 via-white/10 to-ocean-500/50 shadow-2xl shadow-black/40">
+                <div class="rounded-[calc(2rem-1px)] bg-slate-900/95 backdrop-blur-xl overflow-hidden">
+
+                    <!-- Card Header -->
+                    <div class="px-6 sm:px-10 pt-8 pb-6 flex flex-wrap items-center justify-between gap-4 border-b border-white/10 bg-gradient-to-r from-white/[0.04] to-transparent">
+                        <div>
+                            <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-amber-400">Hodota Cam Bình Resort &amp; Spa</p>
+                            <h3 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Set Cơm Trưa</h3>
+                        </div>
+                        <div class="flex flex-col items-start sm:items-end gap-2">
+                            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 ring-1 ring-emerald-400/40 text-emerald-300 text-xs font-bold uppercase tracking-widest">
+                                <i class="fa-regular fa-calendar"></i> Chủ Nhật · 04/10
+                            </span>
+                            <span class="inline-flex items-center gap-2 text-xs text-slate-400 font-medium">
+                                <i class="fa-regular fa-clock"></i> Phục vụ 11h00 – 13h30
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="px-4 sm:px-8 py-8">
+                        <!-- Main dishes -->
+                        <p class="px-2 sm:px-4 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-400 mb-2">Thực đơn</p>
+                        <ul class="divide-y divide-white/5">
+                        <li class="group flex items-center gap-4 py-4 px-2 sm:px-4 rounded-2xl hover:bg-white/[0.04] transition-colors">
+                            <span class="w-10 shrink-0 text-2xl font-extrabold text-amber-400/40 group-hover:text-amber-400 transition-colors tabular-nums">01</span>
+                            <span class="w-11 h-11 shrink-0 rounded-xl bg-white/5 ring-1 ring-white/10 flex items-center justify-center text-red-400">
+                                <i class="fa-solid fa-pepper-hot"></i>
+                            </span>
+                            <span class="flex-1 min-w-0">
+                                <span class="block text-lg sm:text-xl font-semibold text-white leading-snug">Mực xào sa tế</span>
+                                <span class="block text-[11px] uppercase tracking-[0.18em] text-slate-400 mt-0.5">Món xào</span>
+                            </span>
+                        </li>
+                        <li class="group flex items-center gap-4 py-4 px-2 sm:px-4 rounded-2xl hover:bg-white/[0.04] transition-colors">
+                            <span class="w-10 shrink-0 text-2xl font-extrabold text-amber-400/40 group-hover:text-amber-400 transition-colors tabular-nums">02</span>
+                            <span class="w-11 h-11 shrink-0 rounded-xl bg-white/5 ring-1 ring-white/10 flex items-center justify-center text-yellow-300">
+                                <i class="fa-solid fa-egg"></i>
+                            </span>
+                            <span class="flex-1 min-w-0">
+                                <span class="block text-lg sm:text-xl font-semibold text-white leading-snug">Salad dầu giấm trứng</span>
+                                <span class="block text-[11px] uppercase tracking-[0.18em] text-slate-400 mt-0.5">Khai vị</span>
+                            </span>
+                        </li>
+                        <li class="group flex items-center gap-4 py-4 px-2 sm:px-4 rounded-2xl hover:bg-white/[0.04] transition-colors">
+                            <span class="w-10 shrink-0 text-2xl font-extrabold text-amber-400/40 group-hover:text-amber-400 transition-colors tabular-nums">03</span>
+                            <span class="w-11 h-11 shrink-0 rounded-xl bg-white/5 ring-1 ring-white/10 flex items-center justify-center text-amber-400">
+                                <i class="fa-solid fa-fish"></i>
+                            </span>
+                            <span class="flex-1 min-w-0">
+                                <span class="block text-lg sm:text-xl font-semibold text-white leading-snug">Cá chiên sốt cà</span>
+                                <span class="block text-[11px] uppercase tracking-[0.18em] text-slate-400 mt-0.5">Món chiên</span>
+                            </span>
+                        </li>
+                        <li class="group flex items-center gap-4 py-4 px-2 sm:px-4 rounded-2xl hover:bg-white/[0.04] transition-colors">
+                            <span class="w-10 shrink-0 text-2xl font-extrabold text-amber-400/40 group-hover:text-amber-400 transition-colors tabular-nums">04</span>
+                            <span class="w-11 h-11 shrink-0 rounded-xl bg-white/5 ring-1 ring-white/10 flex items-center justify-center text-emerald-400">
+                                <i class="fa-solid fa-leaf"></i>
+                            </span>
+                            <span class="flex-1 min-w-0">
+                                <span class="block text-lg sm:text-xl font-semibold text-white leading-snug">Rau muống xào tỏi</span>
+                                <span class="block text-[11px] uppercase tracking-[0.18em] text-slate-400 mt-0.5">Rau xào</span>
+                            </span>
+                        </li>
+                        <li class="group flex items-center gap-4 py-4 px-2 sm:px-4 rounded-2xl hover:bg-white/[0.04] transition-colors">
+                            <span class="w-10 shrink-0 text-2xl font-extrabold text-amber-400/40 group-hover:text-amber-400 transition-colors tabular-nums">05</span>
+                            <span class="w-11 h-11 shrink-0 rounded-xl bg-white/5 ring-1 ring-white/10 flex items-center justify-center text-orange-300">
+                                <i class="fa-solid fa-bowl-rice"></i>
+                            </span>
+                            <span class="flex-1 min-w-0">
+                                <span class="block text-lg sm:text-xl font-semibold text-white leading-snug">Canh gà lá giang</span>
+                                <span class="block text-[11px] uppercase tracking-[0.18em] text-slate-400 mt-0.5">Món canh</span>
+                            </span>
+                        </li>
+                        </ul>
+
+                        <!-- Divider -->
+                        <div class="flex items-center gap-4 my-8 px-2 sm:px-4">
+                            <span class="flex-1 h-px bg-gradient-to-r from-transparent via-white/15 to-white/15"></span>
+                            <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-slate-400">Dùng kèm</span>
+                            <span class="flex-1 h-px bg-gradient-to-l from-transparent via-white/15 to-white/15"></span>
+                        </div>
+
+                        <!-- Included items -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 px-2 sm:px-4">
+                        <div class="flex items-center gap-3 rounded-2xl bg-white/[0.04] ring-1 ring-white/10 px-4 py-3">
+                            <i class="fa-solid fa-bowl-food text-amber-400 w-5 text-center"></i>
+                            <span class="text-sm font-medium text-slate-200">Cơm trắng</span>
+                        </div>
+                        <div class="flex items-center gap-3 rounded-2xl bg-white/[0.04] ring-1 ring-white/10 px-4 py-3">
+                            <i class="fa-solid fa-glass-water text-amber-400 w-5 text-center"></i>
+                            <span class="text-sm font-medium text-slate-200">Trà đá</span>
+                        </div>
+                        <div class="flex items-center gap-3 rounded-2xl bg-white/[0.04] ring-1 ring-white/10 px-4 py-3">
+                            <i class="fa-solid fa-apple-whole text-amber-400 w-5 text-center"></i>
+                            <span class="text-sm font-medium text-slate-200">Trái cây tráng miệng</span>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Price Footer -->
+                    <div class="px-6 sm:px-10 py-6 bg-gradient-to-r from-amber-500/15 via-amber-500/5 to-transparent border-t border-amber-400/20 flex flex-wrap items-center justify-between gap-4">
+                        <div>
+                            <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-amber-300/80">Giá đặt lẻ</p>
+                            <p class="mt-1 text-3xl sm:text-4xl font-extrabold text-amber-300 tracking-tight">315.000đ <span class="text-base font-semibold text-amber-200/70">/ người</span></p>
+                        </div>
+                        <p class="flex items-center gap-2 text-sm text-slate-300 max-w-xs">
+                            <i class="fa-solid fa-circle-info text-amber-400 shrink-0"></i>
+                            Set menu phục vụ theo lịch nhà hàng.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>Designed for Lâm Hà Retreat 2026 ❤️</p>
+    <!-- Full Culinary Menu Showcase -->
+    <section id="menu" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-600 font-extrabold text-sm uppercase tracking-widest">Thưởng Thức Hương Vị Biển</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mt-1">THỰC ĐƠN CHI TIẾT ẨM THỰC RETREAT</h2>
+                <p class="mt-3 text-slate-600">Thực đơn chọn lọc phong phú từ hải sản tươi sống đến các món ăn đậm đà bản sắc quê hương.</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Dinner BBQ Seafood -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/80 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-5 rounded-2xl overflow-hidden h-72 sm:h-96 relative shadow-md">
+                        <img src="/image/bbq_haisan.jpg" alt="BBQ Hải Sản Hodota" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-red-600 text-white font-extrabold text-xs px-3 py-1.5 rounded-full uppercase tracking-wider">
+                            <i class="fa-solid fa-fire mr-1"></i> Bữa Tối BBQ Đặc Biệt
+                        </div>
+                    </div>
+                    <div class="md:col-span-7">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">SET BBQ HẢI SẢN HODOTA</h3>
+                        <p class="text-slate-500 text-sm mb-6">Thời gian: 18h00 – 21h00 | Tận hưởng không gian tiệc nướng hải sản thơm lừng bên bờ biển.</p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-medium text-slate-700">
+                            <div class="flex items-center gap-2.5 p-2.5 bg-slate-50 rounded-xl"><i class="fa-solid fa-fire-burner text-amber-500"></i> Hàu nướng phô mai</div>
+                            <div class="flex items-center gap-2.5 p-2.5 bg-slate-50 rounded-xl"><i class="fa-solid fa-shrimp text-red-500"></i> Tôm nướng muối ớt</div>
+                            <div class="flex items-center gap-2.5 p-2.5 bg-slate-50 rounded-xl"><i class="fa-solid fa-disease text-purple-500"></i> Bạch tuộc nướng sa tế</div>
+                            <div class="flex items-center gap-2.5 p-2.5 bg-slate-50 rounded-xl"><i class="fa-solid fa-stroopwafel text-emerald-500"></i> Sò điệp/dẹo nướng mỡ hành</div>
+                            <div class="flex items-center gap-2.5 p-2.5 bg-slate-50 rounded-xl"><i class="fa-solid fa-water text-sky-500"></i> Nghêu hấp sả</div>
+                            <div class="flex items-center gap-2.5 p-2.5 bg-slate-50 rounded-xl"><i class="fa-solid fa-bowl-rice text-amber-600"></i> Cơm chiên tỏi trứng</div>
+                            <div class="flex items-center gap-2.5 p-2.5 bg-slate-50 rounded-xl"><i class="fa-solid fa-leaf text-emerald-600"></i> Salad cá ngừ</div>
+                            <div class="flex items-center gap-2.5 p-2.5 bg-slate-50 rounded-xl"><i class="fa-solid fa-fish text-indigo-500"></i> Cá nướng giấy bạc</div>
+                            <div class="flex items-center gap-2.5 p-2.5 bg-slate-50 rounded-xl"><i class="fa-solid fa-drumstick-bite text-amber-700"></i> Cánh gà nướng + bắp</div>
+                            <div class="flex items-center gap-2.5 p-2.5 bg-amber-50 text-amber-900 rounded-xl sm:col-span-2 font-bold border border-amber-200">
+                                <i class="fa-solid fa-star text-amber-500"></i> Mẹt Đặc Sản Lagi: Chả lụi, Nem nướng, Chả cá, Rau sống, Bánh tráng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakfast Buffet & Afternoon Tea -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Breakfast -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full uppercase">07h00 - 09h00</span>
+                            <i class="fa-solid fa-sun text-amber-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">BUFFET ĂN SÁNG ĐA DẠNG</h3>
+                        <p class="text-slate-500 text-xs mb-4">Khởi đầu ngày mới tràn đầy năng lượng với hàng chục món ăn thơm ngon (Buffet khi >45 khách).</p>
+                        
+                        <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-700">
+                            <span class="p-2 bg-slate-100 rounded-lg">Bò kho</span>
+                            <span class="p-2 bg-slate-100 rounded-lg">Hủ tiếu / Cháo</span>
+                            <span class="p-2 bg-slate-100 rounded-lg">Xíu mại</span>
+                            <span class="p-2 bg-slate-100 rounded-lg">Mì xào / Cơm chiên</span>
+                            <span class="p-2 bg-slate-100 rounded-lg">Bánh mì ốp la</span>
+                            <span class="p-2 bg-slate-100 rounded-lg">Gà hấp cải thìa</span>
+                            <span class="p-2 bg-slate-100 rounded-lg">Chân giò chiên</span>
+                            <span class="p-2 bg-slate-100 rounded-lg">Chả giò / Bánh ướt</span>
+                            <span class="p-2 bg-slate-100 rounded-lg">Xôi ngọt / Bánh bò</span>
+                            <span class="p-2 bg-slate-100 rounded-lg">Cà phê / Nước ngọt</span>
+                        </div>
+                    </div>
+
+                    <!-- Afternoon Tea / Countryside Cuisine -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/80 border-l-4 border-l-amber-500">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full uppercase">15h00 - 16h30</span>
+                            <span class="bg-amber-500 text-slate-900 font-extrabold text-[10px] px-2.5 py-0.5 rounded-md">TẶNG KÈM T7</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">BỮA XẾ: ẨM THỰC QUÊ HƯƠNG</h3>
+                        <p class="text-slate-500 text-xs mb-4">Tinh hoa ẩm thực dân dã - Đậm đà hương vị quê nhà dành riêng dịp Thứ 7 / Lễ Tết.</p>
+                        
+                        <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-700">
+                            <span class="p-2 bg-amber-50 text-amber-800 rounded-lg">Bánh xèo giòn rụm</span>
+                            <span class="p-2 bg-amber-50 text-amber-800 rounded-lg">Bánh khọt tôm</span>
+                            <span class="p-2 bg-amber-50 text-amber-800 rounded-lg">Bánh lọc lá</span>
+                            <span class="p-2 bg-amber-50 text-amber-800 rounded-lg">Chả lụi / Nem nướng</span>
+                            <span class="p-2 bg-amber-50 text-amber-800 rounded-lg">Chả cá Lagi</span>
+                            <span class="p-2 bg-amber-50 text-amber-800 rounded-lg">Trái cây tươi</span>
+                            <span class="p-2 bg-amber-50 text-amber-800 rounded-lg">Trà chanh / Trà tắc / Nước mơ / Sấu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodation Info Section -->
+    <section id="room" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-ocean-600 font-extrabold text-sm uppercase tracking-widest">Không Gian Nghỉ Dưỡng</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mt-1">SUITE GARDEN VIEW VILLA</h2>
+                <p class="mt-2 text-slate-600">Căn biệt thự riêng biệt hòa mình giữa thiên nhiên xanh mát, mang lại giấc ngủ thư thái.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Room Image Carousel / Grid -->
+                <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                    <div class="col-span-2 rounded-3xl overflow-hidden h-72 shadow-lg relative">
+                        <img src="/image/suite_room1.jpg" alt="Căn Villa Hodota" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 bg-slate-900/70 backdrop-blur-md px-4 py-2 rounded-xl text-white text-xs font-bold">
+                            Căn Riêng Biệt - View Sân Vườn
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-44 shadow-md">
+                        <img src="/image/suite_room2.jpg" alt="Nội thất phòng khách" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-44 shadow-md">
+                        <img src="/image/suite_room3.jpg" alt="Phòng tắm riêng tiện nghi" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Room Specifications -->
+                <div class="lg:col-span-5 bg-slate-50 p-8 rounded-3xl border border-slate-200">
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Thiết kế căn 4 phòng</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mt-3 mb-4">Thông Số & Tiện Nghi Căn Suite</h3>
+
+                    <div class="space-y-4 text-sm text-slate-700">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center text-ocean-600 font-bold shrink-0">
+                                <i class="fa-solid fa-door-open"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-slate-900">Số lượng phòng:</strong>
+                                4 phòng riêng biệt / 1 căn villa (Diện tích 28m²/phòng).
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center text-ocean-600 font-bold shrink-0">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-slate-900">Sức chứa tối đa:</strong>
+                                8 người lớn / 1 căn biệt thự (Mỗi phòng 1 giường 1m6 x 2m).
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center text-ocean-600 font-bold shrink-0">
+                                <i class="fa-solid fa-tv"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-slate-900">Trang thiết bị nội thất:</strong>
+                                Tivi truyền hình cáp, tủ lạnh mini, điều hòa mát lạnh, máy sấy tóc.
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center text-ocean-600 font-bold shrink-0">
+                                <i class="fa-solid fa-shower"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-slate-900">Phòng tắm riêng biệt:</strong>
+                                Hệ thống nước nóng/lạnh, đầy đủ khăn tắm & vật dụng cá nhân.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 p-4 bg-amber-50 rounded-2xl border border-amber-200 text-amber-800 text-xs font-medium">
+                        <i class="fa-solid fa-circle-info mr-1"></i> <i>Lưu ý: Các phòng thuộc căn riêng biệt KHÔNG thông nội bộ với nhau, đảm bảo sự riêng tư tối đa.</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resort Activity Schedule & Services -->
+    <section id="schedule" class="py-20 bg-slate-100/80 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-ocean-600 font-extrabold text-sm uppercase tracking-widest">Thời Gian Hoạt Động</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mt-1">LỊCH DỊCH VỤ TẠI RESORT</h2>
+                <p class="mt-2 text-slate-600">Nắm rõ khung giờ để không bỏ lỡ bất kỳ hoạt động vui chơi giải trí hấp dẫn nào.</p>
+            </div>
+
+            <!-- Free Services Timetable -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 mb-8">
+                <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span> Khung Giờ Phục Vụ Dịch Vụ Miễn Phí
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+                    <div class="flex justify-between items-center p-3.5 bg-slate-50 rounded-xl">
+                        <span class="font-medium text-slate-700">Thưởng Thức Bữa Trưa</span>
+                        <span class="font-bold text-ocean-700 bg-ocean-50 px-2.5 py-1 rounded-lg">11h00 - 13h30</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-50 rounded-xl">
+                        <span class="font-medium text-slate-700">Tiệc Nướng BBQ Bờ Biển</span>
+                        <span class="font-bold text-ocean-700 bg-ocean-50 px-2.5 py-1 rounded-lg">18h00 - 21h00</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-50 rounded-xl">
+                        <span class="font-medium text-slate-700">Buffet Sáng Cung Đình</span>
+                        <span class="font-bold text-ocean-700 bg-ocean-50 px-2.5 py-1 rounded-lg">07h00 - 09h00</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-50 rounded-xl">
+                        <span class="font-medium text-slate-700">Bữa Xế Ẩm Thực Quê Hương</span>
+                        <span class="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg">15h00 - 16h30</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-50 rounded-xl">
+                        <span class="font-medium text-slate-700">Tắm Biển & Hồ Bơi Bốn Mùa</span>
+                        <span class="font-bold text-ocean-700 bg-ocean-50 px-2.5 py-1 rounded-lg">06h00 - 18h00</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-50 rounded-xl">
+                        <span class="font-medium text-slate-700">Chèo Thuyền SUP & Zipline</span>
+                        <span class="font-bold text-ocean-700 bg-ocean-50 px-2.5 py-1 rounded-lg">7h-11h & 13h30-17h</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-50 rounded-xl">
+                        <span class="font-medium text-slate-700">Bắn Cung & Phi Tiêu Thể Thao</span>
+                        <span class="font-bold text-ocean-700 bg-ocean-50 px-2.5 py-1 rounded-lg">07h00 - 17h00</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-50 rounded-xl">
+                        <span class="font-medium text-slate-700">Pickleball & Cầu Lông</span>
+                        <span class="font-bold text-ocean-700 bg-ocean-50 px-2.5 py-1 rounded-lg">06h00 - 18h00</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-50 rounded-xl">
+                        <span class="font-medium text-slate-700">Xe Điện Nội Khu Cao Cấp</span>
+                        <span class="font-bold text-ocean-700 bg-ocean-50 px-2.5 py-1 rounded-lg">06h00 - 21h00</span>
+                    </div>
+                </div>
+
+                <!-- Note Banner -->
+                <div class="mt-6 p-4 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-center gap-3 text-amber-900 text-sm font-semibold">
+                    <i class="fa-solid fa-ticket text-amber-600 text-xl shrink-0"></i>
+                    <span>Đối với các hoạt động thể thao & giải trí ngoài trời, quý khách vui lòng liên hệ trực tiếp tại <strong>Quầy Lễ Tân</strong> để nhận thiết bị và hỗ trợ hướng dẫn.</span>
+                </div>
+            </div>
+
+            <!-- Paid Services Timetable -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200">
+                <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span> Dịch Vụ Có Tính Phí
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                        <strong class="block text-slate-900 text-base mb-1">Dịch Vụ Spa / Massage</strong>
+                        <span class="text-slate-500 text-xs block">Phục hồi sức khỏe & thư giãn</span>
+                        <span class="font-bold text-slate-800 mt-2 block">7h30 - 12h00 & 13h00 - 17h00</span>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                        <strong class="block text-slate-900 text-base mb-1">Dịch Vụ Nhà Hàng (Gọi món)</strong>
+                        <span class="text-slate-500 text-xs block">Phục vụ các món gọi thêm</span>
+                        <span class="font-bold text-slate-800 mt-2 block">07h00 - 21h00</span>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                        <strong class="block text-slate-900 text-base mb-1">Thuê Xe Đạp Bãi Biển</strong>
+                        <span class="text-slate-500 text-xs block">Dạo quanh khuôn viên resort</span>
+                        <span class="font-bold text-slate-800 mt-2 block">07h00 - 17h00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <h3 class="text-2xl font-extrabold tracking-wider">HODOTA CAM BÌNH RESORT & SPA</h3>
+                    <p class="text-slate-400 text-sm mt-1">Đường Lê Minh Công, Tân Phước, Lagi, Bình Thuận</p>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="tel:0911593848" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-full text-sm transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Hotline: 0911 593 848
+                    </a>
+                    <a href="https://maps.app.goo.gl/ZBX54285LzE8tBLWA" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-5 py-2.5 rounded-full text-sm transition-all border border-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-location-arrow"></i> Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                edit by Felix Nghiem
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
